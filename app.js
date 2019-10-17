@@ -1,11 +1,11 @@
 document.addEventListener("keyup",sizeFunc,false)
 
 function sizeFunc(key){                  
-    if (key.keyCode == "107"){                  
+    if (key.keyCode == "KeyI"){                  
             bigFunc();
             console.log("")
         }
-    else if (key.keyCode == "109"){
+    else if (key.keyCode == "KeyD"){
             smallFunc();
         }
     else {
@@ -37,8 +37,11 @@ function smallFunc(){
         document.getElementById("Balloon").style.fontSize = (currentSize - 15) + 'px'
     }
     else {
-        document.getElementById("Balloon").style.fontSize = "20px";
+        document.getElementById("Balloon").style.fontSize = "10px";
         document.getElementById("Balloon").textContent="Done"
         document.removeEventListener("keydown",sizeFunc)
+
+    }
+
 
     }
